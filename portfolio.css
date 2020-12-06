@@ -1,6 +1,9 @@
 main {
   margin-top: 110px;
   text-align: center;
+  font-size: 125%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 body {
@@ -8,12 +11,12 @@ body {
   background-color: #001534;
 }
 
-
 #top1 {
   display: inline-block;
   padding-left: 10px;
   font-size: 30px;
   font-weight: bold;
+  font-family: monospace;
 }
 
 #top2 {
@@ -22,22 +25,22 @@ body {
   padding-right: 5px;
   letter-spacing: 3px;
   font-size: 30px;
+  font-family: monospace;
 }
 
-
-a:link {
+nav.top-nav a:link {
   color: white;
   text-decoration: none;
 }
 
-a:visited {
+nav.top-nav a:visited {
   color: white;
   text-decoration: none;
 }
 
 nav.top-nav {
-  background-color: #48cae4;
-  position: absolute;
+  background-color: #0077b6;
+  position: absolute; /* position should be relative (for resizing issues) */
   top: 60px;
   left: 0px;
   right: 0px;
@@ -49,33 +52,234 @@ nav.top-nav ul {
   padding: 0;
 }
 
-
 nav.top-nav li {
   font-family: sans-serif;
   font-size: 20px;
   color: #fffd;
   margin: 5px;
   display: inline-block;
-  padding: 5px 25px;
+  padding: 0 25px;
   user-select: none;
   position: relative;
   font-weight: bold;
 }
 
-
 nav.top-nav li:hover {
   text-decoration: underline;
 }
-
-/* ^^THIS IS THE TOP SECTION OF THE WEBPAGE (AKA TITLE AND NAV BAR)^^ */
-
-/* RESUME.HTML */
-
+/* ############################################
+^^THIS IS THE TOP SECTION OF THE WEBPAGE (AKA TITLE AND NAV BAR)^^
+############################################ */
 
 
-/* REFERENCES AKA 404.HTML */
-.error404 {
-  margin-top: 200px;
+/* ############################################
+        HOME.HTML specific styling
+############################################*/
+.proj-preview {
+  border: 2px solid #00b4d8;
+  border-radius: 1em;
+  padding: 20px;
+  margin: auto;
+  display: table;
+  max-width: 800px;
+}
+
+.proj-preview img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: black;
+  padding: 5px;
+  max-width: 200px;
+  float: left;
+  margin: auto;
+}
+
+.proj-preview p {
+  padding: 25px 30px;
+  float: right;
+  max-width: 500px;
+}
+
+
+/* ############################################
+                RESUME.HTML
+############################################ */
+.resume {
+  text-align: justify;
+}
+
+.resume h1 {
   text-align: center;
-  font-size: 150%;
+}
+
+.resume h2 {
+  text-decoration: underline;
+}
+
+.resume ol {
+  list-style: circle;
+}
+
+.column {
+  float: left;
+}
+
+.resume-left {
+  width: 65%;
+  padding: 0 2.5% 2.5% 2.5%;
+  border: 2px solid #00b4d8;
+  border-radius: 1em;
+}
+
+.resume-right {
+  width: 25%;
+  padding-left: 3%;
+  float: right;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* ############################################
+          BIOGRAPHY AKA BIO.HTML
+############################################ */
+.bio-left {
+
+}
+
+.bio-right {
+
+}
+
+.bio h2 {
+  text-decoration: underline;
+}
+
+
+/* ############################################
+          REFERENCES AKA 404.HTML
+############################################ */
+.error404 {
+  margin-top: 275px;
+  font-size: 120%;
+}
+
+
+/* ############################################
+          CONTACT AKA CONTACT.HTML
+############################################ */
+.contact-left {
+  text-align: justify;
+  width: 45%;
+  border: 2px solid #00b4d8;
+  border-radius: 1em;
+  padding: 30px;
+}
+
+.contact label {
+  display: inline-block;
+}
+
+.contact textarea {
+  vertical-align: top;
+  height: 4em;
+}
+
+.contact input.text, textarea {
+  width: 400px;
+  max-width: 100%;
+  float: right;
+}
+
+.contact input.button {
+  position: relative;
+  left: 38%;
+}
+
+.contact-right {
+  float: right;
+  width: 38%;
+  padding: 20px 30px 30px 30px;
+  border: 2px solid #00b4d8;
+  border-radius: 1em;
+}
+
+.contact-right p {
+  text-align: center;
+}
+
+.socialMedia {
+  text-align: center;
+  padding: 15px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+}
+
+.fa-instagram {
+  background: #d580ff;
+}
+
+.fa-at {
+  background: #ff6666;
+}
+
+
+/* ############################################
+        IN-DEPTH PROJECT AKA GOMOKU.HTML
+############################################ */
+.gomoku .row {
+  margin-top: 40px;
+}
+
+.gomoku-desc {
+  width: 50%;
+  border: 2px solid #00b4d8;
+  border-radius: 1em;
+  float: right;
+}
+
+.gomoku-desc p {
+  text-align: justify;
+  padding: 0 30px 0 30px;
+}
+
+.gomoku-desc ul {
+  list-style: circle;
+}
+
+.gomoku-img {
+  width: 40%;
+  border: 2px solid #00b4d8;
+  border-radius: 1em;
+  float: left;
+}
+
+.gomoku-img img {
+  width: 400px;
+  max-width: 100%;
+  background-color: black;
+  border: 2px solid white;
+}
+
+.gomoku-img .figure {
+  margin: 30px;
 }

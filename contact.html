@@ -1,27 +1,108 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Jacob Nam</title>
+    <title>Contact | Jacob Nam</title>
     <link rel="stylesheet" href="portfolio.css">
-    <style>
-    #top1 {font-family: monospace;}
-    #top2 {font-family: monospace;}
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="portfolio.js"></script>
   </head>
 
   <body>
-    <div id="top1"> Jacob Nam </div>
+    <div id="top1">Jacob Nam</div>
 
-    <div id="top2"> Prospective Software Engineer </div>
+    <div id="top2">Prospective Software Engineer</div>
 
     <nav class="top-nav">
       <ul>
-        <li> <a href="main.html" title="Landing page" tabindex="1"> Home </a> </li>
-        <li> <a href="resume.html" title="resume" tabindex="2"> Resume </a> </li>
-        <li> <a href="bio.html" title="biography" tabindex="3"> About </a> </li>
-        <li> <a href="404.html" title="references" tabindex="4"> References </a> </li>
-        <li> <a href="contact.html" title="contact info" tabindex="5"> Contact </a> </li>
+        <li> <a href="home.html" title="Landing Page" tabindex="1">Home</a> </li>
+        <li> <a href="resume.html" title="Resume" tabindex="2">Resume</a> </li>
+        <li> <a href="bio.html" title="Biography" tabindex="3">About</a> </li>
+        <li> <a href="404.html" title="References" tabindex="4">References</a> </li>
+        <li> <a href="contact.html" title="Contact Info" tabindex="5">Contact</a> </li>
     </nav>
 
 <!-- THIS IS THE TOP SECTION OF THE WEBPAGE (AKA TITLE AND NAV BAR)
 tabindex starts at "6" -->
+
+<main>
+  <span class="contact">
+    <h1>Contact Information</h1>
+    <p>
+      For the sake of security, my contact information is private. If you would
+      like to contact me, then please fill out the form below and I will get back to you!
+    </p>
+
+    <br>
+
+    <div class="row">
+      <div class="column contact-left">
+        <form>
+          <label for="firstName">First Name:</label>
+          <input type="text"
+          id="firstName"
+          name="firstName"
+          tabindex="6"
+          maxlength="15"
+          class="text"><br><br>
+
+          <label for="lastName">Last Name:</label>
+          <input type="text"
+          id="lastName"
+          name="lastName"
+          tabindex="7"
+          maxlength="15"
+          class="text"><br><br>
+
+          <label for="prounouns">Preferred Pronouns:</label>
+          <select id="pronouns" name="pronouns" tabindex="8">
+            <option value="unselected">Select...</option>
+            <option value="male">He/Him</option>
+            <option value="female">She/Her</option>
+            <option value="nonBinary">They/Them</option>
+            <option value="preferNot">Prefer not to say</option>
+          </select><br><br>
+
+          <label for="email">Email:</label>
+          <input type="email"
+          id="email"
+          name="email"
+          tabindex="9"
+          maxlength="30"
+          class="text"><br><br>
+
+          <label for="reason">Reason to contact:</label>
+          <textarea id="reason" name="reason" tabindex="10"></textarea><br><br>
+
+          <br> <br>
+
+          <input type="button"
+          onclick="validateForm();"
+          value="Submit"
+          tabindex="11"
+          class="button">
+          <!-- The above input should be replaced by: <input type="submit" value="Submit"> once actually implementable. -->
+          <input type="reset" tabindex="12" class="button">
+
+
+        </form>
+      </div>
+
+      <div class="column contact-right">
+        <p>Here are some alternative methods of contact:</p>
+        <div class="socialMedia">
+          <a href="https://www.facebook.com/nam.jacob"
+          class="fa fa-facebook"
+          title="Facebook"
+          tabindex="13"></a>
+          <a href="https://www.instagram.com/jacobjnam/"
+          class="fa fa-instagram"
+          title="Instagram"
+          tabindex="14"></a>
+          <a href="mailto: jasdfnam@gmail.com"
+          class="fa fa-at"
+          title="Email"
+          tabindex="15"></a>
+        </div>
+      </div>
+  </span>
+</main>
